@@ -30,13 +30,10 @@ import userRouter from "./routes/user.routes.js";
 import sessionRouter from "./routes/session.routes.js";
 import signalRouter from "./routes/signal.routes.js";
 import transferRouter from "./routes/transfer.routes.js";
-import fileRouter from "./routes/file.routes.js";
 
 app.use("/api/v1/auth", userRouter);
 app.use("/api/v1/session", sessionRouter);
 app.use("/api/v1/signal", signalRouter);
-
-app.use("/api/v1/files", fileRouter);
 app.use("/api/v1/transfer", transferRouter);
 
 export default app;

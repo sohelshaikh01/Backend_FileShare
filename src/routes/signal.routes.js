@@ -6,6 +6,7 @@ import {
   getAnswer,
   sendCandidate,
   getCandidates,
+  clearSession
 } from "../controllers/signal.controller.js";
 
 const router = express.Router();
@@ -17,6 +18,8 @@ router.post("/answer", sendAnswer);
 router.get("/answer/:sessionId", getAnswer);
 
 router.post("/candidate", sendCandidate);
-router.get("/candidate/:sessionId", getCandidates);
+router.get("/candidate/:sessionId/:role", getCandidates);
+
+router.post("/candidate/:sessionId", clearSession)
 
 export default router;
